@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR Enterprise</title>
+    <style>
+        /* CSS styles for the goat selling website */
+
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #65959e;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #181918;
+            color: #8b8e8c;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 70%;
+            padding: 20px 0;
+            display: flex;
+            margin-left: 12%;
+            gap: 40px;
+        }
+        .ord{
+            width:40px;
+            height:40px;
+            margin: auto;
+        }
+        button{
+            padding: 7px;
+            border-radius: 2px;
+        }
+        .product {
+            background-color: #b1dfe8;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            border-bottom: 1px solid #ddd;
+            margin-left: auto;
+            margin-top: 5%;
+            margin-right: auto;
+            
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background-color: #141614;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color:  #8ecedb;
+        }
+        label{
+            text-align: right;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SR Enterprise </h1>
+        <h2>Get Best in Best Price</h2>
+    </header>
+    <nav>
+        <div>
+           <a href="index.html">Home</a>
+           <a href="about.html">About Us</a>
+           <a href="contact.html">Contact</a>
+        </div>
+        <div class="label">
+        <label for="language">Select Language:</label>
+        <select id="language" name="language">
+            <option value="en">English</option>
+            <option value="tn">Tamil</option>
+        
+        </select>
+    </div>
+    </nav>
+    <div class="container">
+        <div class="product">
+            
+            <img src="C:\Users\HP\IdeaProjects\GO\images\velladu.jpg" alt="Country velladu">
+            <div class="product-info">
+                <h2>Goat 1</h2>
+                <p>Description of Goat 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Price: 12000</p>
+                <div class="ord">
+                    <button >Order</button>
+                </div>    
+            </div>
+        </div>
+        <div class="product">
+            <img src="C:\Users\HP\IdeaProjects\GO\images\chemmariy.jpg" alt="Country chemmariy">
+            <div class="product-info">
+                <h2>12000</h2>
+                <p>Description of Goat 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Price: $120</p>
+                    <div class="ord">
+                     <button >Order</button>
+               </div>
+            </div>
+         
+        </div>
+        <!-- Add more products here -->
+    </div>
+
+
+    <script>
+        document.getElementById('language').addEventListener('change', function() {
+            var selectedLanguage = this.value;
+            var url = window.location.href.split('?')[0]; // Remove existing query string
+            window.location.href = url + '?lang=' + selectedLanguage;
+        });
+   
+    </script>
+    <footer>
+        <p>&copy; 2024 Goat Market. All rights reserved.</p>
+    </footer>
+</body>
+</html>
